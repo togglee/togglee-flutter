@@ -10,9 +10,12 @@ For general information about developing packages, see the Dart guide for
 and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
+# ![LogoMakr_4ojFPZ](https://user-images.githubusercontent.com/3071208/90978825-2b93de00-e540-11ea-8e0d-60267e95fec8.png)
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+
+## Motivation
+
+Simple library to separate deployment of features from release time. It uses network accessible files without the need of a server to provide feature toggles.
 
 ## Features
 
