@@ -3,7 +3,7 @@ enum ToggleType {
 }
 
 extension ToggleTypeExtension on ToggleType {
-  ToggleType parseType(final String toggleValue) {
+  static ToggleType parseType(final String toggleValue) {
     switch (toggleValue) {
       case 'context':
         return ToggleType.context;

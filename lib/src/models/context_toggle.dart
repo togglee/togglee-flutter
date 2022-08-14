@@ -4,10 +4,20 @@ import 'package:togglee_flutter/src/models/toggle_type.dart';
 
 class ContextToggle implements Toggle {
   @override
-  String name = '';
+  final String name;
 
   @override
-  ToggleType type = ToggleType.context;
+  final ToggleType type;
 
-  List<Conditions> conditions = [];
+  final List<Conditions> conditions;
+
+  const ContextToggle({required this.name, required this.type, required this.conditions});
+
+  @override
+  factory ContextToggle.fromJson(Map<String, dynamic> json) {
+    return ContextToggle(
+        name: json['name'],
+        type: ToggleTypeExtension.parseType(json['type']),
+        conditions: (json['conditions'] as List).map((data) => Conditions.fromJson(data)).toList());
+  }
 }

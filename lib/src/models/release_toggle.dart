@@ -3,10 +3,20 @@ import 'package:togglee_flutter/src/models/toggle_type.dart';
 
 class ReleaseToggle implements Toggle {
   @override
-  String name = '';
+  final String name;
 
   @override
-  ToggleType type = ToggleType.release;
+  final ToggleType type;
 
-  bool value = false;
+  final bool value;
+
+  const ReleaseToggle({required this.name, required this.type, required this.value});
+
+  @override
+  factory ReleaseToggle.fromJson(Map<String, dynamic> json) {
+    return ReleaseToggle(
+        name: json['name'],
+        type: ToggleTypeExtension.parseType(json['type']),
+        value: json['value']);
+  }
 }
