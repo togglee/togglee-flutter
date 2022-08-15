@@ -22,3 +22,5 @@ String toggleJsonResponseOk = '{"toggles":['
     '"type": "release",'
     '"value": true'
     '}]}';
+
+String toggleJsonEmptyResponseOk = '{"toggles":[]}';
